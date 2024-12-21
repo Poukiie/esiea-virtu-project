@@ -1,0 +1,18 @@
+.title {
+    margin-top: 10rem;
+}
+
+.title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+.title .siteName {
+    color: #36a9e1;
+}
+
+.subtitle {
+    font-size: 24px;
+    color: #777;
+}
