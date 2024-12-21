@@ -1,3 +1,1 @@
 # esiea-virtu-project
-
-# VIRTU
