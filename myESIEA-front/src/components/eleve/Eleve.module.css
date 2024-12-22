@@ -1,0 +1,51 @@
+.eleve {
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    background-color: #ffffff;
+}
+
+.eleve:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.eleve td {
+    padding: 1rem;
+}
+
+.eleve td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.eleve td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.nom, .prenom, .birthdate, .classe {
+    color: #000000;
+    margin: 0;
+}
+
+.nom {
+    text-transform: uppercase;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions span {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.actions .edit {
+    color: #2196f3;
+}
+
+.actions .delete {
+    color: #f44336;
+    margin-left: 0.9rem;
+}

@@ -1,0 +1,94 @@
+.element {
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    background-color: #ffffff;
+}
+
+.element:hover, .matiere:not(.element .matiere):hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.element td {
+    padding: 1rem;
+}
+
+.element td:first-child {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.element td:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.matiere:not(.element .matiere) {
+    display: flex;
+    width: fit-content;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+}
+
+.matiere .actions {
+    float: right;
+    margin-left: 1rem;
+}
+
+.button {
+    padding: 0.75rem 1.5rem;
+    width: calc(100% - 3rem);
+    margin: 0.5rem 1.5rem;
+    background-color: #FFFFFF;
+    color: #36a9e1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.title {
+    width: 100%;
+}
+
+.content {
+    margin: 0 1.5rem;
+    padding: 0.5rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.nom, .prenom, .birthdate, .classe, .matiere, .prof, .eleve {
+    color: #000000;
+    margin: 0;
+}
+
+.nom {
+    text-transform: uppercase;
+}
+
+.actions {
+    text-align: right;
+}
+
+.collapsible .actions {
+    float: right;
+    margin-top: -1.45rem;
+}
+
+.actions span {
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.actions .edit {
+    color: #2196f3;
+}
+
+.actions .delete {
+    color: #f44336;
+    margin-left: 1rem;
+}

@@ -1,0 +1,34 @@
+.classe {
+    display: inline-block;
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0.5rem;
+    background-color: #ffffff;
+}
+
+.classe:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.classe .nom {
+    text-transform: uppercase;
+}
+
+.table {
+    width: calc(100% - 3rem);
+    margin: 10px 1.5rem;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+}
+
+.title {
+    color:#36a9e1;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 -1rem 2rem;
+    padding: 0;
+}
