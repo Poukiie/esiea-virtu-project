@@ -51,39 +51,39 @@ Vous pouvez consulter, créer, modifier et supprimer des éléments. \
 Pour les notes et les classes, vous pouvez consulter toutes les notes d'un élève spécifique, ainsi que lister les élèves d'une classe spécifique.
 
 - **Elèves**
-  - Create (POST) : http://localhost:3001/students
-  - Read All (GET) : http://localhost:3001/students
-  - Read (GET) : http://localhost:3001/students/{student-id}
-  - Update (PUT) : http://localhost:3001/students/{student-id}
-  - Delete (DELETE) : http://localhost:3001/students/{student-id}
+  - Create (POST) : /students
+  - Read All (GET) : /students
+  - Read (GET) : /students/{student-id}
+  - Update (PUT) : /students/{student-id}
+  - Delete (DELETE) : /students/{student-id}
   
 - **Professeurs**
-  - Create (POST) : http://localhost:3001/teachers
-  - Read All (GET) : http://localhost:3001/teachers
-  - Read (GET) : http://localhost:3001/teachers/{teacher-id}
-  - Update (PUT) : http://localhost:3001/teachers/{teacher-id}
-  - Delete (DELETE) : http://localhost:3001/teachers/{teacher-id}
+  - Create (POST) : /teachers
+  - Read All (GET) : /teachers
+  - Read (GET) : /teachers/{teacher-id}
+  - Update (PUT) : /teachers/{teacher-id}
+  - Delete (DELETE) : /teachers/{teacher-id}
   
 - **Matières**
-  - Create (POST) : http://localhost:3001/subjects
-  - Read All (GET) : http://localhost:3001/subjects
-  - Read (GET) : http://localhost:3001/subjects/{subject-id}
-  - Update (PUT) : http://localhost:3001/subjects/{subject-id}
-  - Delete (DELETE) : http://localhost:3001/subjects/{subject-id}
+  - Create (POST) : /subjects
+  - Read All (GET) : /subjects
+  - Read (GET) : /subjects/{subject-id}
+  - Update (PUT) : /subjects/{subject-id}
+  - Delete (DELETE) : /subjects/{subject-id}
   
 - **Notes**
-  - Create (POST) : http://localhost:3001/grades
-  - Read grades from student (GET) : http://localhost:3001/grades/student/{student-id}
-  - Read (GET) : http://localhost:3001/grades/{grade-id}
-  - Update (PUT) : http://localhost:3001/grades/{grade-id}
-  - Delete (DELETE) : http://localhost:3001/grades/{grade-id}
+  - Create (POST) : /grades
+  - Read grades from student (GET) : /grades/student/{student-id}
+  - Read (GET) : /grades/{grade-id}
+  - Update (PUT) : /grades/{grade-id}
+  - Delete (DELETE) : /grades/{grade-id}
   
 - **Classes**
-  - Create (POST) : http://localhost:3001/classes
-  - Read students from a class (GET) : http://localhost:3001/classes/{class-id}/students
-  - Read (GET) : http://localhost:3001/classes/{classe-id}
-  - Update (PUT) : http://localhost:3001/classes/{classe-id}
-  - Delete (DELETE) : http://localhost:3001/classes/{classe-id}
+  - Create (POST) : /classes
+  - Read students from a class (GET) : /classes/{class-id}/students
+  - Read (GET) : /classes/{classe-id}
+  - Update (PUT) : /classes/{classe-id}
+  - Delete (DELETE) : /classes/{classe-id}
 
 ## 4 - Fonctionnalités de l’interface utilisateur
 En lançant l'application, vous tomberez sur la page d'accueil. Les onglets dans la navbar vous permettent d'accéder aux autres pages.

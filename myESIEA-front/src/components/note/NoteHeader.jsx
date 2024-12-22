@@ -13,7 +13,7 @@ function NoteHeader({ onSearch }) {
             return;
         }
 
-        const res = await axios.get(`http://localhost:3001/grades?search=${e.target.value}`);
+        const res = await axios.get(`/grades?search=${e.target.value}`);
 
         if(!res.data.length) {
             onSearch(null);

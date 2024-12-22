@@ -14,7 +14,7 @@ function MatiereHeader({ onSearch }) {
             return;
         }
 
-        const res = await axios.get(`http://localhost:3001/subjects?search=${e.target.value}`);
+        const res = await axios.get(`/subjects?search=${e.target.value}`);
 
         if(!res.data.length) {
             onSearch(null);

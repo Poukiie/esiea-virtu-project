@@ -47,8 +47,8 @@ function EditEleve() {
 export default EditEleve;
 
 export async function loader({params}) {
-    const eleve = await axios.get(`http://localhost:3001/students/${params.id}`);
-    const classes = await axios.get(`http://localhost:3001/classes`);
+    const eleve = await axios.get(`/students/${params.id}`);
+    const classes = await axios.get(`/classes`);
 
     const tab_classes = classes.data.map((classe) => {
         if(classe._id === eleve.data.class) console.log(classe);
@@ -65,7 +65,7 @@ export async function action({request, params}) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData.entries());
 
-    axios.put(`http://localhost:3001/students/${params.id}`, postData).then((res) => {
+    axios.put(`/students/${params.id}`, postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });

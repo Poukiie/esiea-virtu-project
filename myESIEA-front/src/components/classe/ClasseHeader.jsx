@@ -14,7 +14,7 @@ function ClasseHeader({ onSearch }) {
             return;
         }
 
-        const res = await axios.get(`http://localhost:3001/classes?search=${e.target.value}`);
+        const res = await axios.get(`/classes?search=${e.target.value}`);
         
         if(!res.data.length) {
             onSearch(null);

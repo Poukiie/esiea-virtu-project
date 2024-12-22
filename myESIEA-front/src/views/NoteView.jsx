@@ -26,7 +26,7 @@ export const NoteView = () => {
 export async function loader({ request }) {
     const url = new URL(request.url);
 
-    const tab_classes = await axios.get('http://localhost:3001/classes');
+    const tab_classes = await axios.get('/classes');
     const classes = tab_classes.data.map((classe) => {
         return { value: classe._id, label: classe.name };
     });
@@ -35,13 +35,13 @@ export async function loader({ request }) {
     let grades = [];
     
     if (url.searchParams.get("classe") != null) {
-        const tab_eleves = await axios.get('http://localhost:3001/classes/' + url.searchParams.get("classe") + '/students');
+        const tab_eleves = await axios.get('/classes/' + url.searchParams.get("classe") + '/students');
         eleves = tab_eleves.data.map((eleve) => {
             return { value: eleve._id, label: eleve.lastname.toUpperCase() + " " + eleve.firstname };
         });
     
         if (url.searchParams.get("eleve") != null) {
-            const gradesResponse = await axios.get('http://localhost:3001/grades/student/' + url.searchParams.get("eleve"));
+            const gradesResponse = await axios.get('/grades/student/' + url.searchParams.get("eleve"));
             grades = gradesResponse.data;
         }
     }

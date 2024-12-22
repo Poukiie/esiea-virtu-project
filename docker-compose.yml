@@ -3,11 +3,11 @@ services:
   backend:
     build:
       context: ./myESIEA-back
-    ports:
-      - "3001:3001"
     volumes:
       - ./myESIEA-back:/usr/src/app 
-      - /usr/src/app/node_modules     
+      - /usr/src/app/node_modules   
+    networks:
+      - mynetwork  
     depends_on:
       - mongo
 
@@ -19,6 +19,8 @@ services:
     volumes:
       - ./myESIEA-front:/usr/src/app
       - /usr/src/app/node_modules 
+    networks:
+      - mynetwork
 
   mongo:
     image: mongo:6.0
@@ -26,6 +28,12 @@ services:
       - "27017:27017"
     volumes:
       - mongo-data:/data/db
+    networks:
+      - mynetwork
 
 volumes:
   mongo-data:
+
+networks:
+  mynetwork:
+    driver: bridge

@@ -48,9 +48,9 @@ function EditClasse() {
 export default EditClasse;
 
 export async function loader({params}) {
-    const classe = await axios.get(`http://localhost:3001/classes/${params.id}`);
+    const classe = await axios.get(`/classes/${params.id}`);
     
-    const matieres = await axios.get('http://localhost:3001/subjects');
+    const matieres = await axios.get('/subjects');
     const tab_matieres = matieres.data.map((matiere) => {
         return { value: matiere._id, label: matiere.name };
     });
@@ -62,7 +62,7 @@ export async function action({ request, params }) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData.entries());
 
-    axios.put(`http://localhost:3001/classes/${params.id}`, postData).then((res) => {
+    axios.put(`/classes/${params.id}`, postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });

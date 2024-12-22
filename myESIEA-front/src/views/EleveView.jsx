@@ -23,7 +23,7 @@ export const EleveView = () => {
 };
 
 export async function loader() {
-    const res = await axios.get('http://localhost:3001/students');
+    const res = await axios.get('/students');
 
     return res.data;
 }

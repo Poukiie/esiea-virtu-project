@@ -47,7 +47,7 @@ export async function action({ request }) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData.entries());
 
-    axios.post('http://localhost:3001/classes', postData).then((res) => {
+    axios.post('/classes', postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });
@@ -62,7 +62,7 @@ export async function action({ request }) {
 }
 
 export async function loader() {
-    const matieres = await axios.get('http://localhost:3001/subjects');
+    const matieres = await axios.get('/subjects');
     const tab_matieres = matieres.data.map((matiere) => {
         return { value: matiere._id, label: matiere.name };
     });

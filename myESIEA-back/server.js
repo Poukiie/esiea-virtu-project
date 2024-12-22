@@ -8,7 +8,10 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+}));
 app.use(express.json());
 app.use("/classes", require("./routes/classRoutes"));
 app.use("/students", require("./routes/studentRoutes"));

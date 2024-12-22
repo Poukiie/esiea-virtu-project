@@ -23,6 +23,6 @@ export const ProfView = () => {
 };
 
 export async function loader() {
-    const res = await axios.get('http://localhost:3001/teachers');
+    const res = await axios.get('/teachers');
     return res.data;
 }

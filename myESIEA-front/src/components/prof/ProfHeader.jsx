@@ -15,7 +15,7 @@ function ProfHeader({ onSearch }) {
             return;
         }
 
-        const res = await axios.get(`http://localhost:3001/teachers?search=${e.target.value}`);
+        const res = await axios.get(`/teachers?search=${e.target.value}`);
 
         if(!res.data.length) {
             onSearch(null);

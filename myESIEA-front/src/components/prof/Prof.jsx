@@ -15,7 +15,7 @@ function Prof({ id, nom, prenom, birthdate, tab_classe, tab_matiere }) {
 
     async function deleteProf() {
         try {
-            await axios.delete(`http://localhost:3001/teachers/${id}`).then((res) => {
+            await axios.delete(`/teachers/${id}`).then((res) => {
                 toast.success(res.data.message, {
                     position: toast.POSITION.BOTTOM_RIGHT
                 });

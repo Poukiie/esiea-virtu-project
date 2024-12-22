@@ -53,7 +53,7 @@ export async function action({ request, params }) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData.entries());
 
-    axios.put(`http://localhost:3001/grades/${params.id}`, postData).then((res) => {
+    axios.put(`/grades/${params.id}`, postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });
@@ -69,7 +69,7 @@ export async function action({ request, params }) {
 }
 
 export async function loader({ params }) {
-    const grade = await axios.get(`http://localhost:3001/grades/${params.id}`);
+    const grade = await axios.get(`/grades/${params.id}`);
     
     return grade.data;
 }

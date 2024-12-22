@@ -9,7 +9,7 @@ import classes from'../Element.module.css'
 function Matiere({ id, nom }) {
     async function deleteMatiere() {
         try {
-            await axios.delete(`http://localhost:3001/subjects/${id}`).then((res) => {
+            await axios.delete(`/subjects/${id}`).then((res) => {
                 toast.success(res.data.message, {
                     position: toast.POSITION.BOTTOM_RIGHT
                 });

@@ -17,7 +17,7 @@ function Note({ id, eleve, matiere, prof, date, note }) {
 
     async function deleteNote() {
         try {
-            await axios.delete(`http://localhost:3001/grades/${id}`).then((res) => {
+            await axios.delete(`/grades/${id}`).then((res) => {
                 toast.success(res.data.message, {
                     position: toast.POSITION.BOTTOM_RIGHT
                 });

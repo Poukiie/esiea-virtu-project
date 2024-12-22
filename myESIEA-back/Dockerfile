@@ -12,8 +12,5 @@ RUN npm install
 # Copier tout le reste du code source
 COPY . .
 
-# Exposer le port
-EXPOSE 3001
-
 # Démarrer l'application
 CMD ["npm", "start"]

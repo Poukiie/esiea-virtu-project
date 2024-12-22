@@ -14,7 +14,7 @@ const Collapsible = (props) => {
 
     async function deleteClasse() {
         try {
-            await axios.delete(`http://localhost:3001/classes/${props.id}`).then((res) => {
+            await axios.delete(`/classes/${props.id}`).then((res) => {
                 toast.success(res.data.message, {
                     position: toast.POSITION.BOTTOM_RIGHT
                 });

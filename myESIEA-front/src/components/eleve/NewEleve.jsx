@@ -59,7 +59,7 @@ export async function action({ request }) {
         return redirect('.');
     }
 console.log(postData)
-    axios.post('http://localhost:3001/students', postData).then((res) => {
+    axios.post('/students', postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });
@@ -74,7 +74,7 @@ console.log(postData)
 }
 
 export async function loader() {
-    const res = await axios.get('http://localhost:3001/classes');
+    const res = await axios.get('/classes');
     const tab_classes = res.data.map((classe) => {
         return { value: classe._id, label: classe.name };
     });

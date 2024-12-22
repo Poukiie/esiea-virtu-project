@@ -23,6 +23,6 @@ export const ClasseView = () => {
 };
 
 export async function loader() {
-    const res = await axios.get('http://localhost:3001/classes');
+    const res = await axios.get('/classes');
     return res.data;
 }

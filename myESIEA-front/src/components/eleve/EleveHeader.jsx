@@ -14,7 +14,7 @@ function EleveHeader({ onSearch }) {
             return;
         }
 
-        const res = await axios.get(`http://localhost:3001/students?search=${e.target.value}`);
+        const res = await axios.get(`/students?search=${e.target.value}`);
 
         if(!res.data.length) {
             onSearch(null);

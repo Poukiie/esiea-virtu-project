@@ -30,7 +30,7 @@ function EditMatire() {
 export default EditMatire;
 
 export async function loader({params}) {
-    const res = await axios.get('http://localhost:3001/subjects/' + params.id);
+    const res = await axios.get('/subjects/' + params.id);
     return res.data;
 }
 
@@ -38,7 +38,7 @@ export async function action({ request, params }) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData.entries());
 
-    axios.put(`http://localhost:3001/subjects/${params.id}`, postData).then((res) => {
+    axios.put(`/subjects/${params.id}`, postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });

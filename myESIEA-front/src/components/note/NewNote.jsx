@@ -57,7 +57,7 @@ export async function action({ request }) {
     const formData = await request.formData();
     const postData = Object.fromEntries(formData.entries());
 
-    axios.post('http://localhost:3001/grades', postData).then((res) => {
+    axios.post('/grades', postData).then((res) => {
         toast.success(res.data.message, {
             position: toast.POSITION.BOTTOM_RIGHT
         });
@@ -73,17 +73,17 @@ export async function action({ request }) {
 }
 
 export async function loader() {
-    const matieres = await axios.get('http://localhost:3001/subjects');
+    const matieres = await axios.get('/subjects');
     const tab_matieres = matieres.data.map((matiere) => {
         return { value: matiere._id, label: matiere.name };
     });
 
-    const profs = await axios.get('http://localhost:3001/teachers');
+    const profs = await axios.get('/teachers');
     const tab_profs = profs.data.map((prof) => {
         return { value: prof._id, label: prof.lastname.toUpperCase() + ' ' + prof.firstname };
     });
 
-    const eleves = await axios.get('http://localhost:3001/students');
+    const eleves = await axios.get('/students');
     const tab_eleves = eleves.data.map((eleve) => {
         return { value: eleve._id, label: eleve.lastname.toUpperCase() + ' ' + eleve.firstname };
     });

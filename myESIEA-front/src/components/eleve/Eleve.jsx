@@ -15,7 +15,7 @@ function Eleve({ id, nom, prenom, birthdate, classe }) {
 
     async function deleteEleve() {
         try {
-            await axios.delete(`http://localhost:3001/students/${id}`).then((res) => {
+            await axios.delete(`/students/${id}`).then((res) => {
                 toast.success(res.data.message, {
                     position: toast.POSITION.BOTTOM_RIGHT
                 });

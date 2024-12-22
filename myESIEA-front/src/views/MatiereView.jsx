@@ -23,6 +23,6 @@ export const MatiereView = () => {
 };
 
 export async function loader() {
-    const res = await axios.get('http://localhost:3001/subjects');
+    const res = await axios.get('/subjects');
     return res.data;
 }
