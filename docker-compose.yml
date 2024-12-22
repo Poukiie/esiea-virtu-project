@@ -1,0 +1,30 @@
+version: '3.9'
+services:
+  backend:
+    build:
+      context: ./myESIEA-back
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./myESIEA-back:/usr/src/app      
+
+    depends_on:
+      - mongo
+
+  frontend:
+    build:
+      context: ./myESIEA-front
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./myESIEA-front:/usr/src/app
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
