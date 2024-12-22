@@ -116,7 +116,7 @@ Les icônes crayon et poubelle sur la card de chaque élément vous permettent d
 Pour les notes, aucune note ne s'affichera au préalable. Vous devez sélectionnez une classe d'abord. La liste des élèves appartenant à cette classe s'affichera dans le second select.
 
 ![image](https://github.com/user-attachments/assets/19e4e356-ae39-46dc-9c72-c709182fa5d0)
-![image](https://github.com/user-attachments/assets/4b47693d-c1dc-4008-accf-1fe1ecc3b47a)
+![image](https://github.com/user-attachments/assets/43518eb0-3535-4556-be3a-1845a38e4138)
 
 Pour les classes, vous pouvez cliquer sur les cards pour les déplier et afficher leurs détails.
 
